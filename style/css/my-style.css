@@ -1,0 +1,61 @@
+* {
+    margin: 0px;
+    font-family: arial;
+    color: white;
+}
+
+main {
+    background-color: rgb(78, 13, 163);
+    height: 650px;
+}
+
+header {
+    background-color: rgb(17, 10, 119);
+    padding-top: 8px;
+    font-size: 20px;
+    text-align: center;
+    height: 50px;
+    font-size: 25px;
+}
+
+#input-form {
+    margin: auto;
+    max-width: 1000px;
+    padding-top: 20px;
+}
+
+h5 {
+    text-align: center;
+}
+
+#form-fpc {
+    width: 500px;
+    margin-right: 50px;
+    float: left;
+}
+
+/* FPC column label */
+#form-fpc :nth-child(2) {
+    text-align: center;
+}
+
+/* Merapikan input form FPC */
+#form-fpc > .form-group > .row {
+    margin: auto;
+}
+
+#result-button {
+    margin-top: 10px;
+}
+
+#button-calculate {
+    clear: both;
+    margin: auto;
+}
+
+footer {
+    background-color: rgb(64, 27, 112);
+    height: 40px;
+    padding-top: 7px;
+    text-align: center;
+}
