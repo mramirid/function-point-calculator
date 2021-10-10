@@ -1,320 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Function Point Calc</title>
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="style/css/my-style.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Function Point Calculator</title>
 
-        <!-- Frameworks -->
-        <link rel="stylesheet" href="style/css/bootstrap.min.css">
-        <script type="text/javascript" src="style/jquery-3.4.0.js"></script>
-        <script type="text/javascript" src="style/js/bootstrap.bundle.min.js"></script>
-    </head>
+  <link rel="stylesheet" href="style/css/my-style.css">
 
-    <body>
-        <main>
-            <header>
-                <p>Function Point Calculator</p>
-            </header>
+  <link rel="stylesheet" href="style/css/bootstrap.min.css">
+  <script type="text/javascript" src="style/jquery-3.4.0.js"></script>
+  <script type="text/javascript" src="style/js/bootstrap.bundle.min.js"></script>
+</head>
 
-            <div id="input-form">
-                <!-- Input form FPC -->
-                <form id="form-fpc" method="post" action="form_fpc.php">
-                    <h5>Function Point Complexity</h5>
-                    <!-- Label kolom -->
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col"></div>
-                            <div class="col">
-                                <label>Low</label>
-                            </div>
-                            <div class="col">
-                                <label>Medium</label>
-                            </div>
-                            <div class="col">
-                                <label>Height</label>
-                            </div>
-                        </div>
-                    </div>
+<body>
+  <main>
+    <header>
+      <p>Function Point Calculator</p>
+    </header>
 
-                    <!-- Kode untuk input form fpc per-baris beserta labelnya -->
-
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col">
-                                <label data-toggle="tooltip" data-placement="bottom" 
-                                title="External Input (EI) adalah proses dasar yang memproses data dan informasi kontrol yang datang dari luar batasan aplikasi.">
-                                External Input</label>
-                            </div>
-                            <div class="col">
-                                <input type="text" name="external-input-simple" id="fpc1" class="form-control" placeholder="0">
-                            </div>
-
-                            <div class="col">
-                                <input type="text" name="external-input-average" id="fpc2" class="form-control" placeholder="0">
-                            </div>
-                            <div class="col">
-                                <input type="text" name="external-input-complex" id="fpc3" class="form-control" placeholder="0">
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col">
-                                <label data-toggle="tooltip" data-placement="bottom"
-                                title="External Output (EO) adalah sebuah proses dasar dimana hasil data dilewatkan dari dalam ke keluar dari batasan aplikasi.">
-                                External output</label>
-                            </div>
-                            <div class="col">
-                                <input type="text" name="external-output-simple" id="fpc4" class="form-control" placeholder="0">
-                            </div>	
-                            <div class="col">
-                                <input type="text" name="external-output-average" id="fpc5" class="form-control" placeholder="0">
-                            </div>	
-                            <div class="col">
-                                <input type="text" name="external-output-complex" id="fpc6" class="form-control" placeholder="0">
-                            </div>	
-                        </div>
-                    </div>
-            
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col">
-                                <label data-toggle="tooltip" data-placement="bottom"
-                                title="Internal Logical File (ILF) adalah kelompok data atau kelompok informasi kontrol yang digunakan dalam aplikasi.">
-                                Internal Logical File</label>
-                            </div>
-                            <div class="col">
-                                <input type="text" name="ilf-simple" id="fpc7" class="form-control" placeholder="0">
-                            </div>	
-                            <div class="col">
-                                <input type="text" name="ilf-average" id="fpc8" class="form-control" placeholder="0">
-                            </div>	
-                            <div class="col">
-                                <input type="text" name="ilf-complex" id="fpc9" class="form-control" placeholder="0">
-                            </div>	
-                        </div>
-                    </div>
-            
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col">
-                                <label data-toggle="tooltip" data-placement="bottom"
-                                title="External Interface File (EIF) adalah kelompok data berelasi atau informasi kontrol yang dirujuk oleh aplikasi, tapi dipelihara oleh aplikasi lain.">
-                                External Interface File</label>
-                            </div>
-                            <div class="col">
-                                <input type="text" name="exif-simple" id="fpc10" class="form-control" placeholder="0">
-                            </div>	
-                            <div class="col">
-                                <input type="text" name="exif-average" id="fpc11" class="form-control" placeholder="0">
-                            </div>	
-                            <div class="col">
-                                <input type="text" name="exif-complex" id="fpc12" class="form-control" placeholder="0">
-                            </div>	
-                        </div>
-                    </div>
-            
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col">
-                                <label data-toggle="tooltip" data-placement="bottom"
-                                title="External Inquiry (EQ) fungsi utamanya adalah menyediakan informasi ke user melalui pengambilan/pemrosesan data atau informasi kontrol dari ILF/EIF.">
-                                External Inquiry</label>
-                            </div>
-                            <div class="col">
-                                <input type="text" name="ei-simple" id="fpc13" class="form-control" placeholder="0">
-                            </div>	
-                            <div class="col">
-                                <input type="text" name="ei-average" id="fpc14" class="form-control" placeholder="0">
-                            </div>	
-                            <div class="col">
-                                <input type="text" name="ei-complex" id="fpc15" class="form-control" placeholder="0">
-                            </div>	
-                        </div>
-                    </div>
-                </form>
-            
-                <!-- Input form TCA -->
-
-                <form id="form-tca">
-                    <h5>Technical Complexity Adjustment</h5>
-
-                    <!-- Kode Input form TCA per-baris yang terdiri dari 3 kolom -->
-
-                    <div class="row">
-                        <div class="col">
-                            <div class="form-group">
-                                <label id="cl-1" data-toggle="tooltip" data-placement="bottom"
-                                title="Data communications" align="center">C1</label>
-                                <input class="form-control" id="c1">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="form-group">
-                                <label id="cl-2" data-toggle="tooltip" data-placement="bottom"
-                                title="Distributed function">C2</label>
-                                <input class="form-control" id="c2">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="form-group">
-                                <label id="cl-3" data-toggle="tooltip" data-placement="bottom"
-                                title="Performance objectives">C3</label>
-                                <input class="form-control" id="c3">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col">
-                            <div class="form-group">
-                                <label id="cl-4" data-toggle="tooltip" data-placement="bottom"
-                                title="Heavily used configuration">C4</label>
-                                <input class="form-control" id="c4">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="form-group">
-                                <label id="cl-5" data-toggle="tooltip" data-placement="bottom"
-                                title="Transaction rate">C5</label>
-                                <input class="form-control" id="c5">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="form-group">
-                                <label id="cl-6" data-toggle="tooltip" data-placement="bottom"
-                                title="On-line data entry">C6</label>
-                                <input class="form-control" id="c6">
-                            </div>
-                        </div>
-                    </div>
-            
-                    <div class="row">
-                        <div class="col">
-                            <div class="form-group">
-                                <label id="cl-7" data-toggle="tooltip" data-placement="bottom"
-                                title="End-user efficiency">C7</label>
-                                <input class="form-control" id="c7">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="form-group">
-                                <label id="cl-8" data-toggle="tooltip" data-placement="bottom"
-                                title="On-line update">C8</label>
-                                <input class="form-control" id="c8">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="form-group">
-                                <label id="cl-9" data-toggle="tooltip" data-placement="bottom"
-                                title="Complex processing">C9</label>
-                                <input class="form-control" id="c9">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col">
-                            <div class="form-group">
-                                <label id="cl-10" data-toggle="tooltip" data-placement="bottom"
-                                title="Reusability">C10</label>
-                                <input class="form-control" id="c10">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="form-group">
-                                <label id="cl-11" data-toggle="tooltip" data-placement="bottom"
-                                title="Installation ease">C11</label>
-                                <input class="form-control" id="c11">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="form-group">
-                                <label id="cl-12" data-toggle="tooltip" data-placement="bottom"
-                                title="Operational ease">C12</label>
-                                <input class="form-control" id="c12">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col">
-                            <div class="form-group">
-                                <label id="cl-13" data-toggle="tooltip" data-placement="bottom"
-                                title="Multiple sites">C13</label>
-                                <input class="form-control" id="c13">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="form-group">
-                                <label id="cl-14" data-toggle="tooltip" data-placement="bottom"
-                                title="Facilitate change">C14</label>
-                                <input class="form-control" id="c14">
-                            </div>
-                        </div>
-                        <div class="col"></div>
-                    </div>
-                </form>
-
-                <!-- Tombol hitung -->
-                <div id="result-button" class="form-group">
-                    <div class="row">
-                        <div class="col"></div>
-                        <div id="button-calculate">
-                            <input id="calculate" class="btn btn-primary" type="button" onclick="SubmitFormData();" value="Hitung Function Point">
-                        </div>
-                        <div class="col"></div>
-                    </div>
-                </div>
-
-                <!-- Form hasil -->
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col"></div>
-                        <div class="col" id="results"></div>
-                        <div class="col"></div>
-                    </div>
-                </div>
-            
-                <script type="text/javascript">
-                    // Kode di bawah akan dieksekusi ketika tombol hitung ditekan
-                    function SubmitFormData() {
-                        var fpc = [];
-                        var tca = [];
-            
-                        // Mengambil data dari tiap Textbox
-                        for (var i = 0; i < 15; i++) {
-                            fpc.push($("#fpc"+(i+1)).val())
-
-                            if (i < 14) {
-                                tca.push($("#c"+(i+1)).val())
-                            }
-                        }
-            
-                        // Kirim data array ke php
-                        $.post("submit.php", { fpc:JSON.stringify(fpc), tca:JSON.stringify(tca) },
-                        function(data) {
-                            $('#results').html(data);
-                        });
-                    }
-                </script>
-                
-                <script>
-                    // Untuk memberikan efek tooltip Boostrap
-                    $(function() {
-                        $('[data-toggle="tooltip"]').tooltip()
-                    })
-                </script>
+    <div id="input-form">
+      <!-- Input form FPC -->
+      <form id="form-fpc" method="post" action="form_fpc.php">
+        <h5>Function Point Complexity</h5>
+        <!-- Label kolom -->
+        <div class="form-group">
+          <div class="row">
+            <div class="col"></div>
+            <div class="col">
+              <label>Low</label>
             </div>
-        </main>
+            <div class="col">
+              <label>Medium</label>
+            </div>
+            <div class="col">
+              <label>Height</label>
+            </div>
+          </div>
+        </div>
 
-        <footer>
-            Made with &#10084; by @mramirid
-        </footer>
-    </body>
+        <!-- Kode untuk input form fpc per-baris beserta labelnya -->
+
+        <div class="form-group">
+          <div class="row">
+            <div class="col">
+              <label data-toggle="tooltip" data-placement="bottom"
+                title="External Input (EI) adalah proses dasar yang memproses data dan informasi kontrol yang datang dari luar batasan aplikasi.">
+                External Input</label>
+            </div>
+            <div class="col">
+              <input type="text" name="external-input-simple" id="fpc1" class="form-control" placeholder="0">
+            </div>
+
+            <div class="col">
+              <input type="text" name="external-input-average" id="fpc2" class="form-control" placeholder="0">
+            </div>
+            <div class="col">
+              <input type="text" name="external-input-complex" id="fpc3" class="form-control" placeholder="0">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="row">
+            <div class="col">
+              <label data-toggle="tooltip" data-placement="bottom"
+                title="External Output (EO) adalah sebuah proses dasar dimana hasil data dilewatkan dari dalam ke keluar dari batasan aplikasi.">
+                External output</label>
+            </div>
+            <div class="col">
+              <input type="text" name="external-output-simple" id="fpc4" class="form-control" placeholder="0">
+            </div>
+            <div class="col">
+              <input type="text" name="external-output-average" id="fpc5" class="form-control" placeholder="0">
+            </div>
+            <div class="col">
+              <input type="text" name="external-output-complex" id="fpc6" class="form-control" placeholder="0">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="row">
+            <div class="col">
+              <label data-toggle="tooltip" data-placement="bottom"
+                title="Internal Logical File (ILF) adalah kelompok data atau kelompok informasi kontrol yang digunakan dalam aplikasi.">
+                Internal Logical File</label>
+            </div>
+            <div class="col">
+              <input type="text" name="ilf-simple" id="fpc7" class="form-control" placeholder="0">
+            </div>
+            <div class="col">
+              <input type="text" name="ilf-average" id="fpc8" class="form-control" placeholder="0">
+            </div>
+            <div class="col">
+              <input type="text" name="ilf-complex" id="fpc9" class="form-control" placeholder="0">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="row">
+            <div class="col">
+              <label data-toggle="tooltip" data-placement="bottom"
+                title="External Interface File (EIF) adalah kelompok data berelasi atau informasi kontrol yang dirujuk oleh aplikasi, tapi dipelihara oleh aplikasi lain.">
+                External Interface File</label>
+            </div>
+            <div class="col">
+              <input type="text" name="exif-simple" id="fpc10" class="form-control" placeholder="0">
+            </div>
+            <div class="col">
+              <input type="text" name="exif-average" id="fpc11" class="form-control" placeholder="0">
+            </div>
+            <div class="col">
+              <input type="text" name="exif-complex" id="fpc12" class="form-control" placeholder="0">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="row">
+            <div class="col">
+              <label data-toggle="tooltip" data-placement="bottom"
+                title="External Inquiry (EQ) fungsi utamanya adalah menyediakan informasi ke user melalui pengambilan/pemrosesan data atau informasi kontrol dari ILF/EIF.">
+                External Inquiry</label>
+            </div>
+            <div class="col">
+              <input type="text" name="ei-simple" id="fpc13" class="form-control" placeholder="0">
+            </div>
+            <div class="col">
+              <input type="text" name="ei-average" id="fpc14" class="form-control" placeholder="0">
+            </div>
+            <div class="col">
+              <input type="text" name="ei-complex" id="fpc15" class="form-control" placeholder="0">
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <!-- Input form TCA -->
+
+      <form id="form-tca">
+        <h5>Technical Complexity Adjustment</h5>
+
+        <!-- Kode Input form TCA per-baris yang terdiri dari 3 kolom -->
+
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label id="cl-1" data-toggle="tooltip" data-placement="bottom" title="Data communications"
+                align="center">C1</label>
+              <input class="form-control" id="c1">
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label id="cl-2" data-toggle="tooltip" data-placement="bottom" title="Distributed function">C2</label>
+              <input class="form-control" id="c2">
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label id="cl-3" data-toggle="tooltip" data-placement="bottom" title="Performance objectives">C3</label>
+              <input class="form-control" id="c3">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label id="cl-4" data-toggle="tooltip" data-placement="bottom"
+                title="Heavily used configuration">C4</label>
+              <input class="form-control" id="c4">
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label id="cl-5" data-toggle="tooltip" data-placement="bottom" title="Transaction rate">C5</label>
+              <input class="form-control" id="c5">
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label id="cl-6" data-toggle="tooltip" data-placement="bottom" title="On-line data entry">C6</label>
+              <input class="form-control" id="c6">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label id="cl-7" data-toggle="tooltip" data-placement="bottom" title="End-user efficiency">C7</label>
+              <input class="form-control" id="c7">
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label id="cl-8" data-toggle="tooltip" data-placement="bottom" title="On-line update">C8</label>
+              <input class="form-control" id="c8">
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label id="cl-9" data-toggle="tooltip" data-placement="bottom" title="Complex processing">C9</label>
+              <input class="form-control" id="c9">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label id="cl-10" data-toggle="tooltip" data-placement="bottom" title="Reusability">C10</label>
+              <input class="form-control" id="c10">
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label id="cl-11" data-toggle="tooltip" data-placement="bottom" title="Installation ease">C11</label>
+              <input class="form-control" id="c11">
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label id="cl-12" data-toggle="tooltip" data-placement="bottom" title="Operational ease">C12</label>
+              <input class="form-control" id="c12">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label id="cl-13" data-toggle="tooltip" data-placement="bottom" title="Multiple sites">C13</label>
+              <input class="form-control" id="c13">
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label id="cl-14" data-toggle="tooltip" data-placement="bottom" title="Facilitate change">C14</label>
+              <input class="form-control" id="c14">
+            </div>
+          </div>
+          <div class="col"></div>
+        </div>
+      </form>
+
+      <!-- Tombol hitung -->
+      <div id="result-button" class="form-group">
+        <div class="row">
+          <div class="col"></div>
+          <div id="button-calculate">
+            <input id="calculate" class="btn btn-primary" type="button" onclick="SubmitFormData();"
+              value="Hitung Function Point">
+          </div>
+          <div class="col"></div>
+        </div>
+      </div>
+
+      <!-- Form hasil -->
+      <div class="form-group">
+        <div class="row">
+          <div class="col"></div>
+          <div class="col" id="results"></div>
+          <div class="col"></div>
+        </div>
+      </div>
+
+      <script type="text/javascript">
+        // Kode di bawah akan dieksekusi ketika tombol hitung ditekan
+        function SubmitFormData() {
+          var fpc = [];
+          var tca = [];
+
+          // Mengambil data dari tiap Textbox
+          for (var i = 0; i < 15; i++) {
+            fpc.push($("#fpc" + (i + 1)).val())
+
+            if (i < 14) {
+              tca.push($("#c" + (i + 1)).val())
+            }
+          }
+
+          // Kirim data array ke php
+          $.post("submit.php", { fpc: JSON.stringify(fpc), tca: JSON.stringify(tca) },
+            function (data) {
+              $('#results').html(data);
+            });
+        }
+      </script>
+
+      <script>
+        // Untuk memberikan efek tooltip Bootstrap
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        })
+      </script>
+    </div>
+  </main>
+
+  <footer>
+    Made with &#10084; by @mramirid
+  </footer>
+</body>
+
 </html>
