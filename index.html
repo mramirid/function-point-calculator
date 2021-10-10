@@ -85,14 +85,14 @@
 </head>
 
 <body>
-  <main>
-    <header>
-      <p>Function Point Calculator</p>
-    </header>
+  <header>
+    <p>Function Point Calculator</p>
+  </header>
 
+  <main>
     <div id="input-form">
       <!-- Input form FPC -->
-      <form id="form-fpc" method="post" action="form_fpc.php">
+      <form id="form-fpc">
         <h5>Function Point Complexity</h5>
         <!-- Label kolom -->
         <div class="form-group">
@@ -120,14 +120,13 @@
                 External Input</label>
             </div>
             <div class="col">
-              <input type="text" name="external-input-simple" class="fpc form-control" placeholder="0">
-            </div>
-
-            <div class="col">
-              <input type="text" name="external-input-average" class="fpc form-control" placeholder="0">
+              <input type="number" name="external-input-simple" class="fpc form-control" placeholder="0">
             </div>
             <div class="col">
-              <input type="text" name="external-input-complex" class="fpc form-control" placeholder="0">
+              <input type="number" name="external-input-average" class="fpc form-control" placeholder="0">
+            </div>
+            <div class="col">
+              <input type="number" name="external-input-complex" class="fpc form-control" placeholder="0">
             </div>
           </div>
         </div>
@@ -140,13 +139,13 @@
                 External output</label>
             </div>
             <div class="col">
-              <input type="text" name="external-output-simple" class="fpc form-control" placeholder="0">
+              <input type="number" name="external-output-simple" class="fpc form-control" placeholder="0">
             </div>
             <div class="col">
-              <input type="text" name="external-output-average" class="fpc form-control" placeholder="0">
+              <input type="number" name="external-output-average" class="fpc form-control" placeholder="0">
             </div>
             <div class="col">
-              <input type="text" name="external-output-complex" class="fpc form-control" placeholder="0">
+              <input type="number" name="external-output-complex" class="fpc form-control" placeholder="0">
             </div>
           </div>
         </div>
@@ -159,13 +158,13 @@
                 Internal Logical File</label>
             </div>
             <div class="col">
-              <input type="text" name="ilf-simple" class="fpc form-control" placeholder="0">
+              <input type="number" name="ilf-simple" class="fpc form-control" placeholder="0">
             </div>
             <div class="col">
-              <input type="text" name="ilf-average" class="fpc form-control" placeholder="0">
+              <input type="number" name="ilf-average" class="fpc form-control" placeholder="0">
             </div>
             <div class="col">
-              <input type="text" name="ilf-complex" class="fpc form-control" placeholder="0">
+              <input type="number" name="ilf-complex" class="fpc form-control" placeholder="0">
             </div>
           </div>
         </div>
@@ -178,13 +177,13 @@
                 External Interface File</label>
             </div>
             <div class="col">
-              <input type="text" name="exif-simple" class="fpc form-control" placeholder="0">
+              <input type="number" name="exif-simple" class="fpc form-control" placeholder="0">
             </div>
             <div class="col">
-              <input type="text" name="exif-average" class="fpc form-control" placeholder="0">
+              <input type="number" name="exif-average" class="fpc form-control" placeholder="0">
             </div>
             <div class="col">
-              <input type="text" name="exif-complex" class="fpc form-control" placeholder="0">
+              <input type="number" name="exif-complex" class="fpc form-control" placeholder="0">
             </div>
           </div>
         </div>
@@ -197,20 +196,19 @@
                 External Inquiry</label>
             </div>
             <div class="col">
-              <input type="text" name="ei-simple" class="fpc form-control" placeholder="0">
+              <input type="number" name="ei-simple" class="fpc form-control" placeholder="0">
             </div>
             <div class="col">
-              <input type="text" name="ei-average" class="fpc form-control" placeholder="0">
+              <input type="number" name="ei-average" class="fpc form-control" placeholder="0">
             </div>
             <div class="col">
-              <input type="text" name="ei-complex" class="fpc form-control" placeholder="0">
+              <input type="number" name="ei-complex" class="fpc form-control" placeholder="0">
             </div>
           </div>
         </div>
       </form>
 
       <!-- Input form TCA -->
-
       <form id="form-tca">
         <h5>Technical Complexity Adjustment</h5>
 
@@ -220,19 +218,19 @@
           <div class="col">
             <div class="form-group">
               <label data-toggle="tooltip" data-placement="bottom" title="Data communications" align="center">C1</label>
-              <input class="vaf form-control">
+              <input class="vaf form-control" type="number" placeholder="0">
             </div>
           </div>
           <div class="col">
             <div class="form-group">
               <label data-toggle="tooltip" data-placement="bottom" title="Distributed function">C2</label>
-              <input class="vaf form-control">
+              <input class="vaf form-control" type="number" placeholder="0">
             </div>
           </div>
           <div class="col">
             <div class="form-group">
               <label data-toggle="tooltip" data-placement="bottom" title="Performance objectives">C3</label>
-              <input class="vaf form-control">
+              <input class="vaf form-control" type="number" placeholder="0">
             </div>
           </div>
         </div>
@@ -241,19 +239,19 @@
           <div class="col">
             <div class="form-group">
               <label data-toggle="tooltip" data-placement="bottom" title="Heavily used configuration">C4</label>
-              <input class="vaf form-control">
+              <input class="vaf form-control" type="number" placeholder="0">
             </div>
           </div>
           <div class="col">
             <div class="form-group">
               <label data-toggle="tooltip" data-placement="bottom" title="Transaction rate">C5</label>
-              <input class="vaf form-control">
+              <input class="vaf form-control" type="number" placeholder="0">
             </div>
           </div>
           <div class="col">
             <div class="form-group">
               <label data-toggle="tooltip" data-placement="bottom" title="On-line data entry">C6</label>
-              <input class="vaf form-control">
+              <input class="vaf form-control" type="number" placeholder="0">
             </div>
           </div>
         </div>
@@ -262,19 +260,19 @@
           <div class="col">
             <div class="form-group">
               <label data-toggle="tooltip" data-placement="bottom" title="End-user efficiency">C7</label>
-              <input class="vaf form-control">
+              <input class="vaf form-control" type="number" placeholder="0">
             </div>
           </div>
           <div class="col">
             <div class="form-group">
               <label data-toggle="tooltip" data-placement="bottom" title="On-line update">C8</label>
-              <input class="vaf form-control">
+              <input class="vaf form-control" type="number" placeholder="0">
             </div>
           </div>
           <div class="col">
             <div class="form-group">
               <label data-toggle="tooltip" data-placement="bottom" title="Complex processing">C9</label>
-              <input class="vaf form-control">
+              <input class="vaf form-control" type="number" placeholder="0">
             </div>
           </div>
         </div>
@@ -283,19 +281,19 @@
           <div class="col">
             <div class="form-group">
               <label data-toggle="tooltip" data-placement="bottom" title="Reusability">C10</label>
-              <input class="vaf form-control">
+              <input class="vaf form-control" type="number" placeholder="0">
             </div>
           </div>
           <div class="col">
             <div class="form-group">
               <label data-toggle="tooltip" data-placement="bottom" title="Installation ease">C11</label>
-              <input class="vaf form-control">
+              <input class="vaf form-control" type="number" placeholder="0">
             </div>
           </div>
           <div class="col">
             <div class="form-group">
               <label data-toggle="tooltip" data-placement="bottom" title="Operational ease">C12</label>
-              <input class="vaf form-control">
+              <input class="vaf form-control" type="number" placeholder="0">
             </div>
           </div>
         </div>
@@ -304,13 +302,13 @@
           <div class="col">
             <div class="form-group">
               <label data-toggle="tooltip" data-placement="bottom" title="Multiple sites">C13</label>
-              <input class="vaf form-control">
+              <input class="vaf form-control" type="number" placeholder="0">
             </div>
           </div>
           <div class="col">
             <div class="form-group">
               <label data-toggle="tooltip" data-placement="bottom" title="Facilitate change">C14</label>
-              <input class="vaf form-control">
+              <input class="vaf form-control" type="number" placeholder="0">
             </div>
           </div>
           <div class="col"></div>
@@ -322,8 +320,7 @@
         <div class="row">
           <div class="col"></div>
           <div id="button-calculate">
-            <input id="calculate" class="btn btn-primary" type="button" onclick="calculateFP();"
-              value="Hitung Function Point">
+            <button id="calculate" class="btn btn-primary" onclick="calculateFP()">Hitung Function Point</button>
           </div>
           <div class="col"></div>
         </div>
@@ -334,36 +331,11 @@
         <div class="row">
           <div class="col"></div>
           <div class="col">
-            <input id="result" type="text" class="form-control" value="0" disabled />
+            <input id="result" type="number" class="form-control" placeholder="0" disabled />
           </div>
           <div class="col"></div>
         </div>
       </div>
-
-      <script type="text/javascript">
-        const complexityWeight = [3, 4, 6, 4, 5, 7, 7, 10, 15, 5, 7, 10, 3, 4, 6];
-
-        function calculateFP() {
-          const ufp = Array.prototype.reduce.call(
-            document.getElementsByClassName("fpc"),
-            (prevVal, fpcInput, i) => prevVal + (+fpcInput.value * complexityWeight[i]),
-            0
-          );
-          const tdi = Array.prototype.reduce.call(
-            document.getElementsByClassName("vaf"),
-            (prevVal, vafInput) => prevVal + +vafInput.value,
-            0
-          );
-          const tca = 0.65 + 0.01 * tdi;
-          const fp = ufp * tca;
-          document.getElementById("result").value = fp;
-        }
-      </script>
-
-      <script>
-        // Untuk memberikan efek tooltip Bootstrap
-        $(() => $('[data-toggle="tooltip"]').tooltip());
-      </script>
     </div>
   </main>
 
@@ -371,5 +343,30 @@
     Made with &#10084; by @mramirid
   </footer>
 </body>
+
+<script>
+  const complexityWeight = [3, 4, 6, 4, 5, 7, 7, 10, 15, 5, 7, 10, 3, 4, 6];
+
+  function calculateFP() {
+    const ufp = Array.prototype.reduce.call(
+      document.getElementsByClassName("fpc"),
+      (prevVal, fpcInput, i) => prevVal + (+fpcInput.value * complexityWeight[i]),
+      0
+    );
+    const tdi = Array.prototype.reduce.call(
+      document.getElementsByClassName("vaf"),
+      (prevVal, vafInput) => prevVal + +vafInput.value,
+      0
+    );
+    const tca = 0.65 + 0.01 * tdi;
+    const fp = ufp * tca;
+    document.getElementById("result").value = fp;
+  }
+</script>
+
+<script>
+  // Untuk memberikan efek tooltip Bootstrap
+  $(() => $('[data-toggle="tooltip"]').tooltip());
+</script>
 
 </html>
